@@ -73,7 +73,7 @@ function updateUI(movies){
 function showCards(movie){
     return `<div class="col-xl-3 col-lg-4 col-md-6 my-3">
                 <div class="card">
-                    <img src="${movie.Poster !== 'N/A' ? movie.Poster : 'img/no-img.png'}" class="card-img-top"  alt="${movie.Title}">
+                    <img src="${movie.Poster !== 'N/A' ? movie.Poster : 'img/no-img.png'}" onerror="this.onerror=null;this.src='img/no-img.png';" class="card-img-top"  alt="${movie.Title}">
                     <div class="card-body">
                         <h5 class="card-title">${movie.Title}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">${movie.Year}</h6>
@@ -88,7 +88,7 @@ function showMovieDetail(movie){
     return `<div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-4 d-flex justify-content-center">
-                        <img src="${movie.Poster !== 'N/A' ? movie.Poster : 'img/no-img.png'}" alt="${movie.Title}" class="img-fluid">
+                        <img src="${movie.Poster !== 'N/A' ? movie.Poster : 'img/no-img.png'}" onerror="this.onerror=null;this.src='img/no-img.png';" alt="${movie.Title}" class="img-fluid">
                     </div>
                     <div class="col-md mt-3">
                         <ul class="list-group">
