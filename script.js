@@ -46,7 +46,7 @@ async function getInput(){
 }
 
 function getMovieDetail(id){
-    return fetch('http://www.omdbapi.com/?apikey=7f45229a&i=' + id)
+    return fetch('https://www.omdbapi.com/?apikey=7f45229a&i=' + id)
     .then(response => response.json())
     .then(movie => movie);
 }
@@ -58,7 +58,7 @@ function updateModal(movie){
 }
 
 function getMovies(keyword){
-    return fetch('http://www.omdbapi.com/?apikey=7f45229a&s=' + keyword)
+    return fetch('https://www.omdbapi.com/?apikey=7f45229a&s=' + keyword)
             .then(response => response.json())
             .then(response => response.Search);
 }
